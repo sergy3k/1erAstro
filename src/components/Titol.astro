@@ -1,0 +1,13 @@
+---
+import "../styles/global.css";
+interface Props {
+	title : string;
+}
+const {title ="TITULO DEFECTUOSO"} = Astro.props;
+---
+
+	
+<div id="container" class="mt-20 text-[40px] font-bold font-serif">
+	<h1>{title}</h1>
+</div>
+

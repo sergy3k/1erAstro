@@ -1,0 +1,93 @@
+---
+import Navegacio from '../components/Navegacio.astro';
+import Layout from '../layouts/Layout.astro'; 
+import Peu from '../components/Peu.astro'; 
+import Titol from '../components/Titol.astro';
+import cvData from '../data/cv.json';
+import ButtonMIO from '../components/button.astro';
+import Projectes from '../components/Projectes.astro';
+import Button from '../components/button.astro';
+
+
+---
+
+<Layout>
+	<div class="flex flex-col items-center">
+	<div class="w-[700px]">
+		<Navegacio />
+		<Titol title={`Ciao, I'm ${cvData.name}.`} />
+		<h2 class="text-gray-500 text-2xl font-serif">{cvData.title}</h2>
+		<p class=" mt-6 font-serif text-[20px] mb-5">{cvData.profile_summary}</p>
+		<a href="informacio">
+			<ButtonMIO text="Més informació" />
+		</a>
+		<hr class="border-0.5 border-gray-300 w-[700px] mt-15 mb-15"/>
+
+		<a class="font-serif font-bold text-[22px]">Projectes personals</a>
+		<h2 class="text-gray-700 text-xl font-serif mt-5">A continuació, una selecció de projectes recents en què he treballat.</h2>
+	</div >
+	<div class="w-[1000px]">
+	<div class="mt-15 grid grid-cols-2 ">
+		<Projectes 
+			title={`${cvData.projects[0].name}`} 
+			subtitle={`${cvData.projects[0].description}`} 
+			image={`${cvData.projects[0].image}`} 
+		/>
+		<Projectes 
+			title={`${cvData.projects[1].name}`} 
+			subtitle={`${cvData.projects[1].description}`} 
+			image={`${cvData.projects[1].image}`} 
+		/>
+		<Projectes 
+			title={`${cvData.projects[2].name}`} 
+			subtitle={`${cvData.projects[2].description}`} 
+			image={`${cvData.projects[2].image}`} 
+		/>
+		<Projectes 
+			title={`${cvData.projects[3].name}`} 
+			subtitle={`${cvData.projects[3].description}`} 
+			image={`${cvData.projects[3].image}`} 
+		/>
+	</div>
+</div>
+<div class="w-[700px]">
+	<a href="/projectespage">
+		<Button text="Veure més projectes" />
+	</a>
+
+	<a class="font-serif font-bold text-[22px]">Skills</a>
+	<h2 class="text-gray-700 text-xl font-serif mt-5">Les meves Skills principals</h2>
+
+	<div class="w-[700px] mt-8 grid grid-cols-1 gap-4">
+		
+		
+		{cvData.skills.slice(0, 4).map((skill, index) => (
+			<span key={index} class="bg-gray-100 text-center text-white text-lg font-medium me-4 px-6 py-2 rounded-2xl dark:bg-gray-800 dark:text-white border border-gray-500">
+				{skill}
+			</span>
+		))}
+	</div>
+
+
+	<div class="w-[700px]">
+		<a href="/skills">
+			<Button text="Veure més Skills" />
+		</a>
+
+
+
+
+
+</div>
+
+	<div class="w-[700px]">
+		<Peu />
+	</div>
+</div>
+
+
+
+
+
+	
+</Layout>

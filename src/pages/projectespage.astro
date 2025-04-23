@@ -1,0 +1,44 @@
+---
+import Navegacio from '../components/Navegacio.astro';
+import Layout from '../layouts/Layout.astro'; 
+import Peu from '../components/Peu.astro'; 
+import Titol from '../components/Titol.astro';
+import cvData from '../data/cv.json';
+import ButtonMIO from '../components/button.astro';
+import Projectes from '../components/Projectes.astro';
+import Button from '../components/button.astro';
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+    <div class="w-[700px]">
+        <Navegacio />
+        <Titol title="Projectes." />
+        <hr class="border-0.5 border-gray-300 w-[700px] mt-6"/>
+        <div class="mt-15 grid grid-cols-2 ">
+            <Projectes 
+                title={`${cvData.projects[0].name}`} 
+                subtitle={`${cvData.projects[0].description}`} 
+                image={`${cvData.projects[0].image}`} 
+            />
+            <Projectes 
+                title={`${cvData.projects[1].name}`} 
+                subtitle={`${cvData.projects[1].description}`} 
+                image={`${cvData.projects[1].image}`} 
+            />
+            <Projectes 
+                title={`${cvData.projects[2].name}`} 
+                subtitle={`${cvData.projects[2].description}`} 
+                image={`${cvData.projects[2].image}`} 
+            />
+            <Projectes 
+                title={`${cvData.projects[3].name}`} 
+                subtitle={`${cvData.projects[3].description}`} 
+                image={`${cvData.projects[3].image}`} 
+            />
+            
+        </div>
+        <Peu />
+    </div>
+</Layout>   

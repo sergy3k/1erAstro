@@ -1,0 +1,44 @@
+---
+export interface Props {
+	text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<button id="Button_Info" class="font-mono">
+	<span>{text}</span>
+	<span id="Button_arrow">→</span>
+</button>
+
+<style>
+	#Button_Info {
+		background-color: #000000;
+		border: none;
+		color: white;
+		padding: 8px 30px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 13.5px;
+		font-weight: 700;
+		margin: 30px 0px;
+		cursor: pointer;
+		border-radius: 50px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	#Button_arrow {
+		font-size: 20px;
+		transition: transform 0.1s ease;
+	}
+	#Button_Info:hover #Button_arrow {
+		transform: translateX(10px);
+	}
+    #Button_Info:hover {
+		background-color: darkslategray;
+	}
+	.font-mono {
+		font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+	}
+</style>
