@@ -7,6 +7,7 @@ import cvData from '../data/cv.json';
 import ButtonMIO from '../components/button.astro';
 import Projectes from '../components/Projectes.astro';
 import Button from '../components/button.astro';
+import CC from '../components/CC.astro';
 
 
 ---
@@ -27,12 +28,14 @@ import Button from '../components/button.astro';
 		<h2 class="text-gray-700 text-xl font-serif mt-5">A continuació, una selecció de projectes recents en què he treballat.</h2>
 	</div >
 	<div class="w-[1000px]">
-	<div class="mt-15 grid grid-cols-2 ">
+	<div class="mt-15 grid grid-cols-1 ">
+		<a href="/beastmode">
 		<Projectes 
-			title={`${cvData.projects[0].name}`} 
-			subtitle={`${cvData.projects[0].description}`} 
-			image={`${cvData.projects[0].image}`} 
+			title={`${cvData.projects[4].name}`} 
+			subtitle={`${cvData.projects[4].description}`} 
+			image={`${cvData.projects[4].image}`} 
 		/>
+		</a>
 		<Projectes 
 			title={`${cvData.projects[1].name}`} 
 			subtitle={`${cvData.projects[1].description}`} 
@@ -43,11 +46,14 @@ import Button from '../components/button.astro';
 			subtitle={`${cvData.projects[2].description}`} 
 			image={`${cvData.projects[2].image}`} 
 		/>
-		<Projectes 
-			title={`${cvData.projects[3].name}`} 
-			subtitle={`${cvData.projects[3].description}`} 
-			image={`${cvData.projects[3].image}`} 
-		/>
+		 
+                <Projectes 
+                    title={`${cvData.projects[0].name}`} 
+                    subtitle={`${cvData.projects[0].description}`} 
+                    image={`${cvData.projects[0].image}`} 
+                />
+            
+		
 	</div>
 </div>
 <div class="w-[700px]">

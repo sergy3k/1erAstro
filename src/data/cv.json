@@ -92,6 +92,12 @@
             "description": "Aplicació per monitoritzar entrenaments i progrés físic.",
             "url": "https://fitnesstracker.dev",
             "image": "https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg"
+        },
+         {
+            "name": "BeastMode",
+            "description": "Web marca de begudes energetiques amb Astro i TailwindCSS.",
+            "url": "https://slrbeastmode.netlify.app",
+            "image": "/public/beastpreviewwebp.webp"
         }
     ],
     "blog_posts": [{

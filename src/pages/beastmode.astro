@@ -1,0 +1,50 @@
+---
+import Navegacio from '../components/Navegacio.astro';
+import Layout from '../layouts/Layout.astro'; 
+import Peu from '../components/Peu.astro'; 
+import Titol from '../components/Titol.astro';
+import cvData from '../data/cv.json';
+import ButtonMIO from '../components/button.astro';
+import Projectes from '../components/Projectes.astro';
+import Button from '../components/button.astro';
+import CC from '../components/CC.astro';
+
+
+---
+<Layout>
+    <div class="flex flex-col items-center">
+    <div class="w-[700px]">
+        <Navegacio />
+        <Titol title="BeastMode." />
+        <CC />    
+        <hr class="border-0.5 border-gray-300 w-[700px] mt-6"/>
+        
+            <img src="/beastpreviewavif.avif" alt="BeastMode preview" class="w-full rounded-lg mt-6" />
+            <p class="mt-6 font-serif text-[20px] mb-5">{cvData.projects[4].description}</p>
+            <div class="mt-6 text-[18px] font-serif space-y-4 mb-5">
+                <div>
+                    <strong>Objectiu</strong><br />
+                    Crear una pàgina web moderna i visualment impactant per promocionar "BeastMode", una beguda energètica pensada per a persones actives i creatives. L'objectiu és transmetre energia, velocitat i modernitat, combinant una estètica potent amb una navegació clara i funcional. La web ha estat dissenyada amb HTML i CSS purs, amb un enfocament responsive per adaptar-se a tot tipus de dispositius.
+                </div>
+                <div>
+                    <strong>Eines utilitzades</strong><br />
+                    HTML5: per estructurar correctament el contingut de la pàgina.<br />
+                    CSS3: per estilitzar els elements, aplicant gradients, animacions i disseny responsive.<br />
+                    Figma: per fer esbossos previs del disseny visual i jerarquia de continguts.<br />
+                    Eina de generació d’imatges Midjourney per crear imatges impactants del producte, fons abstractes amb energia visual i escenes publicitàries amb estil modern i futurista.<br />
+                    Coolors: per definir una paleta cromàtica que evoqui energia, força i dinamisme.
+                </div>
+                <div>
+                    <strong>Repte tècnic</strong><br />
+                    El principal repte va ser integrar imatges generades per IA amb una qualitat visual alta dins d’un entorn HTML/CSS lleuger i ràpid de carregar.
+                </div>
+            </div>
+           <h1 class="mt-6 text-[18px] font-serif space-y-4 mb-5"><strong>Video review de la web</strong></h1>
+        <video src="/beastreviewmp4.mp4" autoplay loop muted playsinline class="w-full rounded-lg mt-4"></video>
+
+            <a href="https://slrbeastmode.netlify.app">
+                <ButtonMIO text="Visita BeastMode" />
+            </a> 
+    <Peu />
+
+</Layout>
