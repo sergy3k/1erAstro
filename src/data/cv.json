@@ -97,7 +97,7 @@
             "name": "BeastMode",
             "description": "Web marca de begudes energetiques amb Astro i TailwindCSS.",
             "url": "https://slrbeastmode.netlify.app",
-            "image": "/public/beastpreviewwebp.webp"
+            "image": "/beastpreviewwebp.webp"
         }
     ],
     "blog_posts": [{
